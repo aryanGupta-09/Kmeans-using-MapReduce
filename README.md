@@ -1,4 +1,4 @@
-# Kmeans using MapReduce
+# Kmeans-using-MapReduce
 Building a scalable K-Means clustering system with MapReduce paradigm and gRPC communication. This project showcases the seamless coordination between masters, mappers, and reducers to enable efficient data analysis, fostering cluster discovery and insights.
 
 # Tech Stack
