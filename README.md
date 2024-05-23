@@ -23,4 +23,6 @@ Building a scalable K-Means clustering system with MapReduce paradigm and gRPC c
   python -m grpc_tools.protoc -I. --python_out=. --grpc_python_out=. kmeans.proto
 ```
 
-4. Run the Python files
+4. Update Input/points.txt
+
+5. Run the Python files
