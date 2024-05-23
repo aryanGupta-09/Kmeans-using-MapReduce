@@ -1,0 +1,50 @@
+syntax = "proto3";
+
+message Centroid {
+    repeated float coordinates = 1;
+}
+
+message MapRequest {
+    int32 mapper_id = 1;
+    repeated Centroid centroids = 2;
+    int32 start = 3;
+    int32 end = 4;
+    int32 num_reducers = 5;
+}
+
+message MapResponse {
+    bool success = 1;
+    string error = 2;
+}
+
+message ReduceRequest {
+    int32 reducer_id = 1;
+    int32 failed_id = 2;
+    repeated string mappers = 3;
+}
+
+message ReducerInputRequest {
+    int32 mapper_id = 1;
+    int32 reducer_id = 2;
+}
+
+message KeyValues {
+    float key = 1;
+    repeated float values = 2;
+}
+
+message ReducerInputResponse {
+    repeated KeyValues key_values = 1;
+}
+
+message ReduceResponse {
+    bool success = 1;
+    string error = 2;
+    string output = 3;
+}
+
+service KMeans {
+    rpc Map(MapRequest) returns (MapResponse) {}
+    rpc Reduce(ReduceRequest) returns (ReduceResponse) {}
+    rpc ReducerInput(ReducerInputRequest) returns (ReducerInputResponse) {}
+}
