@@ -1,5 +1,5 @@
 # Kmeans-using-MapReduce
-Building a scalable K-Means clustering system with MapReduce paradigm and gRPC communication. This project showcases the seamless coordination between masters, mappers, and reducers to enable efficient data analysis, fostering cluster discovery and insights.
+A scalable K-Means clustering system with MapReduce paradigm and gRPC communication. This project showcases the seamless coordination between masters, mappers, and reducers to enable efficient data analysis, fostering cluster discovery and insights.
 
 ## Tech Stack
 <a href="https://www.python.org/" target="_blank" rel="noreferrer"><img src="https://github.com/aryanGupta-09/GitHub-Profile-Icons/blob/main/Languages/Python.svg" width="45" height="45" alt="Python" /></a>
